@@ -2,6 +2,8 @@ import psycopg2 as sql
 import os
 import sys
 import json as js
+
+
 con = sql.connect(host="localhost", dbname='ishaan', user='postgres', password="123") 
 cur = con.cursor()
 
@@ -17,21 +19,19 @@ def json_column_name(json_file):
     """a json file is opened with alias f
     data is dumped in data list
     column _name list is made and all keys are inputed using key method"""
-def json_column_types(json_file):
-    f = open(json_file)
-    data = js.load(f)
-    column_type = []
-    for i in data:
-        for j in i:
-            if data[j] not in column_name:
-                column_type.append(data[j])
-    return column_type
-    """json file is opened and data is loaded into empty list data
-    data is iterated over and data[j]'s type is appended to column_type """
-    return column_type
-json_column_name("distros.json")
- 
+def json_column_types(config_file):
+    Config_File = open(config_file)
+    config = js.load(Config_File)
+    column_types = []
+    for i in config:
+            column_types.append(config[i])
+    print(column_types)
+    Config_File.close()
+    return column_types
+    """dbconfig json file is opened and data is loaded into config
+    config is iterated over and config[i] is appended to column_types """
 
+j
 def creating_table(config_file):
     f1 = open(config_file)
     config = js.load(config_file)
