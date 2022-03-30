@@ -21,9 +21,19 @@ def json_column_name(json_file):
     data is dumped in data list
     an empty list named column_name is made and  
     data is iterated through and all the keys are appended in column_name"""
-
+def json_column_types(json_file):
+    f = open(json_file)
+    data = js.load(f)
+    column_type = []
+    for i in data:
+        for j in i:
+            if data[j] not in column_name:
+                column_type.append(type(data[j]))
+    return column_type
+    """json file is opened and data is loaded into empty list data
+    data is iterated over and data[j]'s type is appended to column_type """
 json_column_name("distros.json")
-try:
+try: 
     # cur.execute("DROP TABLE ishaan_table")
     # cur.execute("CREATE TABLE ishaan_table(name varchar(30) NOT NULL primary key, date  date )")
     con.commit()
