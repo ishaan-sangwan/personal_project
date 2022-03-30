@@ -7,6 +7,19 @@ cur = con.cursor()
 
 """created a connection betweeen python and postgres and named it con 
 in con created a cursor named cur"""
+def json_column_name(json_file):
+    f = open(json_file)
+    data = js.load(f)
+    column_name = []
+    for i in data:
+        for j in i:
+            if j not in column_name:
+                column_name.append(j)
+    f.close()
+    
+    return column_name
+
+json_column_name("distros.json")
 try:
     # cur.execute("DROP TABLE ishaan_table")
     # cur.execute("CREATE TABLE ishaan_table(name varchar(30) NOT NULL primary key, date  date )")
