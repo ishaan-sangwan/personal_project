@@ -28,7 +28,7 @@ def json_column_types(json_file):
     for i in data:
         for j in i:
             if data[j] not in column_name:
-                column_type.append(type(data[j]))
+                column_type.append(data[j])
     return column_type
     """json file is opened and data is loaded into empty list data
     data is iterated over and data[j]'s type is appended to column_type """
