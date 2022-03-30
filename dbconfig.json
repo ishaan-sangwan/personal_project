@@ -1,0 +1,7 @@
+{
+    "Name":"varchar[50]",
+    "Version":"numeric",
+    "Install":"varchar[50]",
+    "Owner":"varchar[50]",
+    "Kernel":"numeric"
+}
