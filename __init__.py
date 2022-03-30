@@ -9,6 +9,7 @@ cur = con.cursor()
 
 """created a connection betweeen python and postgres and named it con 
 in con created a cursor named cur"""
+
 def json_column_name(json_file):
     f = open(json_file)
     data = js.load(f)
@@ -19,6 +20,7 @@ def json_column_name(json_file):
     """a json file is opened with alias f
     data is dumped in data list
     column _name list is made and all keys are inputed using key method"""
+
 def json_column_types(config_file):
     Config_File = open(config_file)
     config = js.load(Config_File)
