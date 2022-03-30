@@ -15,10 +15,8 @@ try:
     out = cur.fetchall()
     for i in out:
         print(i)
-
-    """created new table named ishaan _table in database ishaan
-    and changes are comitted in connection"""
-
+    """ cur.fetchall fetches all the output from postgresql and dumps it into out
+    then out is iterated line by line"""
 
 except Exception as e:
     con.rollback()
