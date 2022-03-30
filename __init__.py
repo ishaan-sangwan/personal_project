@@ -32,6 +32,7 @@ def json_column_types(json_file):
     return column_type
     """json file is opened and data is loaded into empty list data
     data is iterated over and data[j]'s type is appended to column_type """
+    return column_type
 json_column_name("distros.json")
 try: 
     # cur.execute("DROP TABLE ishaan_table")
