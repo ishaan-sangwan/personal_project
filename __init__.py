@@ -16,8 +16,11 @@ def json_column_name(json_file):
             if j not in column_name:
                 column_name.append(j)
     f.close()
-    
     return column_name
+    """a json file is opened with alias f
+    data is dumped in data list
+    an empty list named column_name is made and  
+    data is iterated through and all the keys are appended in column_name"""
 
 json_column_name("distros.json")
 try:
