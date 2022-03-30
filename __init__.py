@@ -1,6 +1,7 @@
 import psycopg2 as sql
 import os
 import sys
+import json as js
 con = sql.connect(host="localhost", dbname='ishaan', user='postgres', password="123") 
 cur = con.cursor()
 
