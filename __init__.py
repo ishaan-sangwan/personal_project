@@ -34,6 +34,17 @@ def json_column_types(json_file):
     data is iterated over and data[j]'s type is appended to column_type """
     return column_type
 json_column_name("distros.json")
+ 
+
+def creating_table(config_file):
+    f1 = open(config_file)
+    config = js.load(config_file)
+    cur.execute("CREATE TABLE test('s_no numeric primary key')")
+    for i in data:
+        cur.execute("ALTER TABLE test ADD COLUMN {} {}".format(i, data[i]))
+        con.commit()
+
+""" new function to create table and adding all the columns by iterating through the config file"""
 try: 
     # cur.execute("DROP TABLE ishaan_table")
     # cur.execute("CREATE TABLE ishaan_table(name varchar(30) NOT NULL primary key, date  date )")
