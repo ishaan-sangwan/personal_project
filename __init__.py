@@ -10,13 +10,13 @@ in con created a cursor named cur"""
 def json_column_name(json_file):
     f = open(json_file)
     data = js.load(f)
-    column_name = data[0].keys()
+    column_name = list(data[0].keys())
     f.close()
+    print(column_name)
     return column_name
     """a json file is opened with alias f
     data is dumped in data list
-    an empty list named column_name is made and  
-    data is iterated through and all the keys are appended in column_name"""
+    column _name list is made and all keys are inputed using key method"""
 def json_column_types(json_file):
     f = open(json_file)
     data = js.load(f)
