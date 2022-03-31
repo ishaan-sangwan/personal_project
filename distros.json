@@ -43,7 +43,7 @@
 	},
 	{
 		"Name": "Gentoo",
-		"Version": "Rolling Release",
+		"Version": "10",
 		"Install": "emerge",
 		"Owner": "Gentoo Foundation",
 		"Kernel": "4.12"

@@ -1,7 +1,7 @@
 {
-    "Name"          :"varchar[50]",
-    "Version"       :"numeric",
-    "Install"       :"varchar[50]",
-    "Owner"         :"varchar[50]",
-    "Kernel"        :"numeric"
+    "Name"          :"varchar",
+    "Version"       :"NUMERIC",
+    "Install"       :"varchar",
+    "Owner"         :"varchar",
+    "Kernel"        :"NUMERIC"
 }
