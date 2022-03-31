@@ -33,18 +33,26 @@ def json_column_types(config_file):
     """dbconfig json file is opened and data is loaded into config
     config is iterated over and config[i] is appended to column_types """
 
-j
+
 def creating_table(config_file):
     f1 = open(config_file)
     config = js.load(config_file)
     cur.execute("CREATE TABLE test('s_no numeric primary key')")
-    for i in data:
-        cur.execute("ALTER TABLE test ADD COLUMN {} {}".format(i, data[i]))
+    for i in config:
+        cur.execute("ALTER TABLE test ADD COLUMN {} {}".format(i, config[i]))
         con.commit()
     f.close()
 """ new function to create table and adding all the columns by iterating through the config file"""
 
 
-def data_entry(data_file):
-    f = open("distros.json")
-    pass
+def data_entry(data_file, column_names):
+    try:
+        f = open("distros.json")
+        Data_File = js.load(f)
+        for i in Data_File:
+            values = list(Data_File.values())
+            cur.execute("INSERT INTO test", str(column_names)[1:-1], "VALUES",str(values)[1:-1])
+        f.close()
+    except Exception as e:
+        print(e)
+    
