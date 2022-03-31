@@ -36,7 +36,7 @@
 	},
 	{
 		"Name": "Arch Linux",
-		"Version": "Rolling Release",
+		"Version": "9",
 		"Install": "pacman",
 		"Owner": "SPI",
 		"Kernel": "4.13"
